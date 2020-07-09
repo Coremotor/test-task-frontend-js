@@ -6,6 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>PAYANYWAY</title>
+
 </head>
 
 <body class="body">
@@ -15,7 +16,7 @@
         </a>
     </header>
 
-    <main class="main">
+    <main id="js-transition-disabled" class="main">
         <form action="" class="form">
             <h1 class="form__title">Регистрация</h1>
 
@@ -25,19 +26,35 @@
             </div>
 
             <label class="display-none" for="form__inn-field">ИНН</label>
-            <input id="form__inn-field" class="form__input-field" type="text" name="inn" placeholder="ИНН организации или ИП"
+            <input id="form__inn-field"
+                   class="form__input-field"
+                   type="text"
+                   name="inn"
+                   placeholder="ИНН организации или ИП"
                    required>
 
             <label class="display-none" for="form__site-field">Сайт</label>
-            <input id="form__site-field" class="form__input-field" type="text" name="site" placeholder="Сайт магазина"
+            <input id="form__site-field"
+                   class="form__input-field"
+                   type="text"
+                   name="site"
+                   placeholder="Сайт магазина"
                    required>
 
             <label class="display-none" for="form__email-field">Почта</label>
-            <input id="form__email-field" class="form__input-field" type="email" name="email"
-                   placeholder="Электронная почта" required>
+            <input id="form__email-field"
+                   class="form__input-field"
+                   type="email"
+                   name="email"
+                   placeholder="Электронная почта"
+                   required>
 
             <label class="display-none" for="form__phone-field">Номер телефона</label>
-            <input id="form__phone-field" class="form__input-field" type="text" name="email" placeholder="Номер телефона"
+            <input id="form__phone-field"
+                   class="form__input-field"
+                   type="tel"
+                   name="tel"
+                   placeholder="Номер телефона"
                    required>
 
             <button class="form__btn-submit" type="submit">Зарегистрироваться</button>
@@ -63,7 +80,7 @@
     </main>
 
     <footer class="footer">
-        <small class="footer__copyright">&copy;2005—2020 НКО «МОНЕТА» (ООО)</small>
+        <small class="footer__copyright">&copy;&nbsp;2005—2020 НКО «МОНЕТА» (ООО)</small>
         <a href="#" class="footer__day-mode link-style-reset" aria-label="Смена ночного и дневного режима"></a>
         <a href="#" class="footer__language-change link-style-reset">English</a>
     </footer>

@@ -1,3 +1,40 @@
-.navigation__item {
-  display: inline-block;
+.navigation {
+
+  &__list {
+    display: flex;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item:after {
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: rgba(61, 127, 255, 0.24);
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+
+  &__item:last-child:after {
+    display: none;
+  }
+
+  &__link {
+    color: $link-color;
+    border-bottom: 1px solid transparent;
+    transition: .5s;
+  }
+
+  &__link:hover {
+    border-bottom: 1px solid $link-color;
+  }
 }

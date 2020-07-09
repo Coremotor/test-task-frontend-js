@@ -1,8 +1,22 @@
+@import "normalize";
+@import "variables";
+
 .body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   box-sizing: border-box;
   font-family: Golos, sans-serif;
-  background-color: #F0F3FA;
-  padding: 140px 40px 26px;
+  background-color: $bg-color;
+  padding: 140px 40px 40px;
+}
+
+a, button {
+  cursor: pointer;
+}
+
+img {
+  height: 100%;
 }
 
 .display-none {
@@ -15,6 +29,10 @@
 
 .link-style-reset {
   text-decoration: none;
+}
+
+#js-transition-disabled * {
+  transition: none !important;
 }
 
 @import "header.scss";

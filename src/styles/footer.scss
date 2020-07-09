@@ -1,7 +1,28 @@
 .footer {
   display: flex;
-}
+  justify-self: flex-end;
+  align-items: center;
+  color: $text-color;
 
-.footer__copyright {
-  margin-right: auto;
+  &__copyright {
+    margin-right: auto;
+  }
+
+  &__day-mode {
+    width: 14px;
+    height: 14px;
+    background-image: url("../img/moon.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 22px;
+  }
+
+  &__language-change {
+    color: $text-color;
+    transition: .5s;
+  }
+
+  &__language-change:hover {
+    color: $link-color;
+  }
 }
