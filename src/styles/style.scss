@@ -1,0 +1,25 @@
+.body {
+  box-sizing: border-box;
+  font-family: Golos, sans-serif;
+  background-color: #F0F3FA;
+  padding: 140px 40px 26px;
+}
+
+.display-none {
+  display: none;
+}
+
+.list-style-reset {
+  list-style: none;
+}
+
+.link-style-reset {
+  text-decoration: none;
+}
+
+@import "header.scss";
+@import "main.scss";
+@import "form.scss";
+@import "navigation.scss";
+@import "footer.scss";
+
