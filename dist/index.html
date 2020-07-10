@@ -1,1 +1,114 @@
-<!doctype html><html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1"><meta http-equiv="X-UA-Compatible" content="ie=edge"><title>PAYANYWAY</title></head><body class="body"><header class="header"><a href="#" class="header__link link-style-reset"><img src="c80ceb45d6de5c82077a14f1f87fec96.svg" alt="logo" class="header__logo"></a></header><main id="js-transition-disabled" class="main"><form action="" class="form"><h1 class="form__title">Регистрация</h1><div class="form__buttons-wrapper"><button class="btn form__btn-resident" type="button">Резидент России</button> <button class="btn form__btn-non-resident" type="button">Нерезидент</button></div><label class="display-none" for="form__inn-field">ИНН</label> <input id="form__inn-field" class="form__input-field" name="inn" placeholder="ИНН организации или ИП" required> <label class="display-none" for="form__site-field">Сайт</label> <input id="form__site-field" class="form__input-field" name="site" placeholder="Сайт магазина" required> <label class="display-none" for="form__email-field">Почта</label> <input id="form__email-field" class="form__input-field" type="email" name="email" placeholder="Электронная почта" required> <label class="display-none" for="form__phone-field">Номер телефона</label> <input id="form__phone-field" class="form__input-field" type="tel" name="tel" placeholder="Номер телефона" required> <button class="form__btn-submit" type="submit">Зарегистрироваться</button> <span class="form__text">Нажимая на кнопку, вы принимаете <a href="#" class="form__link link-style-reset">Правила и условия</a></span></form><nav class="navigation"><ul class="navigation__list list-style-reset"><li class="navigation__item"><a href="#" class="navigation__link link-style-reset">Вход в кабинет</a></li><li class="navigation__item"><a href="#" class="navigation__link link-style-reset">Служба поддержки</a></li><li class="navigation__item"><a href="#" class="navigation__link link-style-reset">Контакты</a></li></ul></nav></main><footer class="footer"><small class="footer__copyright">&copy;&nbsp;2005—2020 НКО «МОНЕТА» (ООО)</small> <a href="#" class="footer__day-mode link-style-reset" aria-label="Смена ночного и дневного режима"></a> <a href="#" class="footer__language-change link-style-reset">English</a></footer><script src="bundle.js"></script></body></html>
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PAYANYWAY</title>
+
+</head>
+
+<body class="body">
+    <header class="header">
+        <a href="#" class="header__link link-style-reset">
+            <img src="450f294dc303781d5d333ce11a60478e.svg" alt="logo" class="header__logo">
+        </a>
+    </header>
+
+    <main id="js-transition-disabled" class="main">
+        <form action="" class="form">
+            <h1 class="form__title">Регистрация</h1>
+
+            <div class="form__buttons-wrapper">
+                <button class="btn form__btn-resident" type="button">Резидент России</button>
+                <button class="btn form__btn-non-resident" type="button">Нерезидент</button>
+            </div>
+
+            <div class="form__input-wrapper">
+                <label class="display-none" for="form__inn-field">ИНН</label>
+                <input id="form__inn-field"
+                       class="form__input-field js-form__inn-field"
+                       type="number"
+                       min="10"
+                       name="inn"
+                       placeholder="ИНН организации или ИП"
+                       required>
+
+                <span class="form__input-verification-result-block js-inn-verification-result-block"></span>
+                <span class="display-none form__input-verification-result-block js-inn-ok">
+                    <img class="form__icon-done" src="c5db64ff6e47c62ed8b21d71fa78620e.svg" alt="Done">
+                </span>
+            </div>
+
+            <div class="form__input-wrapper">
+                <label class="display-none" for="form__site-field">Сайт</label>
+                <input id="form__site-field"
+                       class="form__input-field js-form__site-field"
+                       type="text"
+                       name="site"
+                       placeholder="Сайт магазина"
+                       required>
+
+                <span class="display-none form__input-verification-result-block js-site-ok">
+                    <img class="form__icon-done" src="c5db64ff6e47c62ed8b21d71fa78620e.svg" alt="Done">
+                </span>
+            </div>
+
+            <div class="form__input-wrapper">
+                <label class="display-none" for="form__email-field">Почта</label>
+                <input id="form__email-field"
+                       class="form__input-field js-form__email-field"
+                       type="email"
+                       name="email"
+                       placeholder="Электронная почта"
+                       required>
+
+                <span class="display-none form__input-verification-result-block js-email-ok">
+                    <img class="form__icon-done" src="c5db64ff6e47c62ed8b21d71fa78620e.svg" alt="Done">
+                </span>
+            </div>
+
+            <div class="form__input-wrapper">
+                <label class="display-none" for="form__phone-field">Номер телефона</label>
+                <input id="form__phone-field"
+                       class="form__input-field js-form__phone-field"
+                       type="tel"
+                       name="tel"
+                       placeholder="Номер телефона"
+                       required>
+
+                <span class="display-none form__input-verification-result-block js-phone-ok">
+                    <img class="form__icon-done" src="c5db64ff6e47c62ed8b21d71fa78620e.svg" alt="Done">
+                </span>
+            </div>
+
+            <button id="js-btn-submit" class="form__btn-submit-disabled" type="submit" disabled>Зарегистрироваться</button>
+
+            <span class="form__text">Нажимая на кнопку, вы принимаете
+                    <a href="#" class="form__link link-style-reset">Правила и условия</a>
+            </span>
+        </form>
+
+        <nav class="navigation">
+            <ul class="navigation__list list-style-reset">
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link link-style-reset">Вход в кабинет</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link link-style-reset">Служба поддержки</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link link-style-reset">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+    </main>
+
+    <footer class="footer">
+        <small class="footer__copyright">&copy;&nbsp;2005—2020 НКО «МОНЕТА» (ООО)</small>
+        <a href="#" class="footer__day-mode link-style-reset" aria-label="Смена ночного и дневного режима"></a>
+        <a href="#" class="footer__language-change link-style-reset">English</a>
+    </footer>
+<script src="bundle.js"></script></body>
+</html>

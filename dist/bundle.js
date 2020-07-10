@@ -1,1 +1,267 @@
-!function(e){var t={};function n(o){if(t[o])return t[o].exports;var r=t[o]={i:o,l:!1,exports:{}};return e[o].call(r.exports,r,r.exports,n),r.l=!0,r.exports}n.m=e,n.c=t,n.d=function(e,t,o){n.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:o})},n.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},n.t=function(e,t){if(1&t&&(e=n(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var o=Object.create(null);if(n.r(o),Object.defineProperty(o,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var r in e)n.d(o,r,function(t){return e[t]}.bind(null,r));return o},n.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return n.d(t,"a",t),t},n.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},n.p="",n(n.s=10)}([function(e,t,n){"use strict";var o,r=function(){return void 0===o&&(o=Boolean(window&&document&&document.all&&!window.atob)),o},i=function(){var e={};return function(t){if(void 0===e[t]){var n=document.querySelector(t);if(window.HTMLIFrameElement&&n instanceof window.HTMLIFrameElement)try{n=n.contentDocument.head}catch(e){n=null}e[t]=n}return e[t]}}(),a=[];function s(e){for(var t=-1,n=0;n<a.length;n++)if(a[n].identifier===e){t=n;break}return t}function l(e,t){for(var n={},o=[],r=0;r<e.length;r++){var i=e[r],l=t.base?i[0]+t.base:i[0],c=n[l]||0,f="".concat(l," ").concat(c);n[l]=c+1;var d=s(f),u={css:i[1],media:i[2],sourceMap:i[3]};-1!==d?(a[d].references++,a[d].updater(u)):a.push({identifier:f,updater:g(u,t),references:1}),o.push(f)}return o}function c(e){var t=document.createElement("style"),o=e.attributes||{};if(void 0===o.nonce){var r=n.nc;r&&(o.nonce=r)}if(Object.keys(o).forEach((function(e){t.setAttribute(e,o[e])})),"function"==typeof e.insert)e.insert(t);else{var a=i(e.insert||"head");if(!a)throw new Error("Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.");a.appendChild(t)}return t}var f,d=(f=[],function(e,t){return f[e]=t,f.filter(Boolean).join("\n")});function u(e,t,n,o){var r=n?"":o.media?"@media ".concat(o.media," {").concat(o.css,"}"):o.css;if(e.styleSheet)e.styleSheet.cssText=d(t,r);else{var i=document.createTextNode(r),a=e.childNodes;a[t]&&e.removeChild(a[t]),a.length?e.insertBefore(i,a[t]):e.appendChild(i)}}function p(e,t,n){var o=n.css,r=n.media,i=n.sourceMap;if(r?e.setAttribute("media",r):e.removeAttribute("media"),i&&btoa&&(o+="\n/*# sourceMappingURL=data:application/json;base64,".concat(btoa(unescape(encodeURIComponent(JSON.stringify(i))))," */")),e.styleSheet)e.styleSheet.cssText=o;else{for(;e.firstChild;)e.removeChild(e.firstChild);e.appendChild(document.createTextNode(o))}}var b=null,m=0;function g(e,t){var n,o,r;if(t.singleton){var i=m++;n=b||(b=c(t)),o=u.bind(null,n,i,!1),r=u.bind(null,n,i,!0)}else n=c(t),o=p.bind(null,n,t),r=function(){!function(e){if(null===e.parentNode)return!1;e.parentNode.removeChild(e)}(n)};return o(e),function(t){if(t){if(t.css===e.css&&t.media===e.media&&t.sourceMap===e.sourceMap)return;o(e=t)}else r()}}e.exports=function(e,t){(t=t||{}).singleton||"boolean"==typeof t.singleton||(t.singleton=r());var n=l(e=e||[],t);return function(e){if(e=e||[],"[object Array]"===Object.prototype.toString.call(e)){for(var o=0;o<n.length;o++){var r=s(n[o]);a[r].references--}for(var i=l(e,t),c=0;c<n.length;c++){var f=s(n[c]);0===a[f].references&&(a[f].updater(),a.splice(f,1))}n=i}}}},function(e,t,n){"use strict";e.exports=function(e){var t=[];return t.toString=function(){return this.map((function(t){var n=function(e,t){var n=e[1]||"",o=e[3];if(!o)return n;if(t&&"function"==typeof btoa){var r=(a=o,s=btoa(unescape(encodeURIComponent(JSON.stringify(a)))),l="sourceMappingURL=data:application/json;charset=utf-8;base64,".concat(s),"/*# ".concat(l," */")),i=o.sources.map((function(e){return"/*# sourceURL=".concat(o.sourceRoot||"").concat(e," */")}));return[n].concat(i).concat([r]).join("\n")}var a,s,l;return[n].join("\n")}(t,e);return t[2]?"@media ".concat(t[2]," {").concat(n,"}"):n})).join("")},t.i=function(e,n,o){"string"==typeof e&&(e=[[null,e,""]]);var r={};if(o)for(var i=0;i<this.length;i++){var a=this[i][0];null!=a&&(r[a]=!0)}for(var s=0;s<e.length;s++){var l=[].concat(e[s]);o&&r[l[0]]||(n&&(l[2]?l[2]="".concat(n," and ").concat(l[2]):l[2]=n),t.push(l))}},t}},function(e,t,n){"use strict";e.exports=function(e,t){return t||(t={}),"string"!=typeof(e=e&&e.__esModule?e.default:e)?e:(/^['"].*['"]$/.test(e)&&(e=e.slice(1,-1)),t.hash&&(e+=t.hash),/["'() \t\n]/.test(e)||t.needQuotes?'"'.concat(e.replace(/"/g,'\\"').replace(/\n/g,"\\n"),'"'):e)}},function(e,t,n){var o=n(0),r=n(4);"string"==typeof(r=r.__esModule?r.default:r)&&(r=[[e.i,r,""]]);var i={insert:"head",singleton:!1},a=(o(r,i),r.locals?r.locals:{});e.exports=a},function(e,t,n){var o=n(1),r=n(2),i=n(5);t=o(!1);var a=r(i);t.push([e.i,'/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-0.25em}sup{top:-0.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,[type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}.body{display:flex;flex-direction:column;min-height:100vh;box-sizing:border-box;font-family:Golos,sans-serif;background-color:#f0f3fa;padding:140px 40px 40px}a,button{cursor:pointer}img{height:100%}.display-none{display:none}.list-style-reset{list-style:none}.link-style-reset{text-decoration:none}#js-transition-disabled *{transition:none !important}.header{display:flex;align-items:center;justify-content:center;margin-bottom:37px}.header__link{display:block}.main{display:flex;align-items:center;flex-direction:column;flex:1}.form{display:flex;flex-direction:column;width:432px;background-color:#fff;box-shadow:0 4px 8px rgba(109,125,167,.16);border-radius:6px;padding:32px 32px 40px;margin-bottom:24px}.form__title{font-weight:500;font-size:24px;line-height:32px;color:#111;margin:0 0 24px}.form__buttons-wrapper{display:flex;margin-bottom:16px}.form .btn{border:none;font-size:14px;line-height:20px;padding:6px 16px}.form__btn-resident{border-radius:6px 0 0 6px;background-color:#ffe58d}.form__btn-non-resident{border-radius:0 6px 6px 0;background-color:rgba(109,125,167,.08)}.form__input-field{font-size:16px;line-height:24px;border:2px solid #d9d9d9;border-radius:6px;padding:10px 44px 10px 16px;margin-bottom:16px}.form__input-field::placeholder{color:#8d8d8d}.form__input-field:last-of-type{margin-bottom:24px}.form__btn-submit{align-self:flex-start;font-weight:700;font-size:16px;line-height:24px;border:none;border-radius:6px;color:#111;background-color:#ffd968;padding:12px 32px;margin-bottom:8px;transition:.5s}.form__btn-submit:hover{box-shadow:0 0 20px 0 rgba(0,0,0,.5)}.form__text{color:#111;font-size:14px;line-height:20px}.form__link{color:#3d7fff;border-bottom:1px solid transparent;transition:.5s}.form__link:hover{border-bottom:1px solid #3d7fff}.navigation__list{display:flex;font-size:14px;line-height:20px;padding:0;margin:0}.navigation__item{display:flex;align-items:center}.navigation__item:after{content:"";display:inline-block;width:4px;height:4px;border-radius:50%;background-color:rgba(61,127,255,.24);margin-left:8px;margin-right:8px}.navigation__item:last-child:after{display:none}.navigation__link{color:#3d7fff;border-bottom:1px solid transparent;transition:.5s}.navigation__link:hover{border-bottom:1px solid #3d7fff}.footer{display:flex;justify-self:flex-end;align-items:center;color:#111}.footer__copyright{margin-right:auto}.footer__day-mode{width:14px;height:14px;background-image:url('+a+");background-position:center;background-repeat:no-repeat;margin-right:22px}.footer__language-change{color:#111;transition:.5s}.footer__language-change:hover{color:#3d7fff}",""]),e.exports=t},function(e,t,n){"use strict";n.r(t),t.default=n.p+"77f880f9da126509f46ba0e08ac3d34b.svg"},function(e,t,n){var o=n(0),r=n(7);"string"==typeof(r=r.__esModule?r.default:r)&&(r=[[e.i,r,""]]);var i={insert:"head",singleton:!1},a=(o(r,i),r.locals?r.locals:{});e.exports=a},function(e,t,n){var o=n(1),r=n(2),i=n(8),a=n(9);t=o(!1);var s=r(i),l=r(a);t.push([e.i,'@font-face{font-family:"Golos";src:url('+s+') format("woff2"),url('+l+') format("woff");font-weight:normal;font-style:normal}',""]),e.exports=t},function(e,t,n){"use strict";n.r(t),t.default=n.p+"af87bdb7d8392f53376ab42c0b442cde.woff2"},function(e,t,n){"use strict";n.r(t),t.default=n.p+"a9b27a2fe86ff3e619883e5db17766ff.woff"},function(e,t,n){"use strict";n.r(t);n(3),n(6);window.onload=()=>(document.querySelector(".main").removeAttribute("id"),void console.log("transition on"))}]);
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = "./index.js");
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ "../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./styles/all.scss":
+/*!********************************************************************************************************!*\
+  !*** ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./styles/all.scss ***!
+  \********************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"../node_modules/css-loader/dist/runtime/api.js\");\nvar ___CSS_LOADER_GET_URL_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/getUrl.js */ \"../node_modules/css-loader/dist/runtime/getUrl.js\");\nvar ___CSS_LOADER_URL_IMPORT_0___ = __webpack_require__(/*! ../fonts/Golostextregular.woff2 */ \"./fonts/Golostextregular.woff2\");\nvar ___CSS_LOADER_URL_IMPORT_1___ = __webpack_require__(/*! ../fonts/Golostextregular.woff */ \"./fonts/Golostextregular.woff\");\nvar ___CSS_LOADER_URL_IMPORT_2___ = __webpack_require__(/*! ../img/moon.svg */ \"./img/moon.svg\");\nexports = ___CSS_LOADER_API_IMPORT___(false);\nvar ___CSS_LOADER_URL_REPLACEMENT_0___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_0___);\nvar ___CSS_LOADER_URL_REPLACEMENT_1___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_1___);\nvar ___CSS_LOADER_URL_REPLACEMENT_2___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_2___);\n// Module\nexports.push([module.i, \".form {\\n  display: flex;\\n  flex-direction: column;\\n  width: 432px;\\n  background-color: #FFFFFF;\\n  box-shadow: 0 4px 8px rgba(109, 125, 167, 0.16);\\n  border-radius: 6px;\\n  padding: 32px 32px 40px;\\n  margin-bottom: 24px;\\n}\\n.form__title {\\n  font-weight: 500;\\n  font-size: 24px;\\n  line-height: 32px;\\n  color: #111111;\\n  margin: 0 0 24px;\\n}\\n.form__buttons-wrapper {\\n  display: flex;\\n  margin-bottom: 16px;\\n}\\n.form .btn {\\n  border: none;\\n  font-size: 14px;\\n  line-height: 20px;\\n  padding: 6px 16px;\\n}\\n.form__btn-resident {\\n  border-radius: 6px 0 0 6px;\\n  background-color: #FFE58D;\\n  transition: 0.5s;\\n}\\n.form__btn-resident:hover {\\n  box-shadow: -5px 0 15px 0 rgba(0, 0, 0, 0.2);\\n}\\n.form__btn-non-resident {\\n  border-radius: 0 6px 6px 0;\\n  background-color: rgba(109, 125, 167, 0.08);\\n  transition: 0.5s;\\n}\\n.form__btn-non-resident:hover {\\n  box-shadow: 5px 0 15px 0 rgba(0, 0, 0, 0.2);\\n}\\n.form__input-field {\\n  flex-grow: 1;\\n  font-size: 16px;\\n  line-height: 24px;\\n  border: 2px solid #D9D9D9;\\n  border-radius: 6px;\\n  padding: 10px 44px 10px 16px;\\n  transition: 0.5s;\\n}\\n.form__input-field::placeholder {\\n  color: #8D8D8D;\\n}\\n.form__input-wrapper:last-of-type {\\n  margin-bottom: 24px;\\n}\\n.form__input-field:hover {\\n  border: 2px solid #3D7FFF;\\n}\\n.form__input-wrapper {\\n  position: relative;\\n  display: flex;\\n  align-items: center;\\n  margin-bottom: 16px;\\n}\\n.form__input-verification-result-block {\\n  position: absolute;\\n  display: flex;\\n  right: 15px;\\n}\\n.form__icon-done {\\n  height: 32px;\\n  width: 32px;\\n}\\n.form__btn-submit {\\n  align-self: flex-start;\\n  font-weight: 700;\\n  font-size: 16px;\\n  line-height: 24px;\\n  border: none;\\n  border-radius: 6px;\\n  color: #111111;\\n  background-color: #FFD968;\\n  padding: 12px 32px;\\n  margin-bottom: 8px;\\n  transition: 0.5s;\\n}\\n.form__btn-submit-disabled {\\n  align-self: flex-start;\\n  font-weight: 700;\\n  font-size: 16px;\\n  line-height: 24px;\\n  border: none;\\n  border-radius: 6px;\\n  color: white;\\n  background-color: gray;\\n  padding: 12px 32px;\\n  margin-bottom: 8px;\\n}\\n.form__btn-submit:hover {\\n  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);\\n}\\n.form__text {\\n  color: #111111;\\n  font-size: 14px;\\n  line-height: 20px;\\n}\\n.form__link {\\n  color: #3D7FFF;\\n  border-bottom: 1px solid transparent;\\n  transition: 0.5s;\\n}\\n.form__link:hover {\\n  border-bottom: 1px solid #3D7FFF;\\n}\\n\\n@font-face {\\n  font-family: \\\"Golos\\\";\\n  src: url(\" + ___CSS_LOADER_URL_REPLACEMENT_0___ + \") format(\\\"woff2\\\"), url(\" + ___CSS_LOADER_URL_REPLACEMENT_1___ + \") format(\\\"woff\\\");\\n  font-weight: normal;\\n  font-style: normal;\\n}\\n.body {\\n  display: flex;\\n  flex-direction: column;\\n  min-height: 100vh;\\n  box-sizing: border-box;\\n  font-family: Golos, sans-serif;\\n  background-color: #F0F3FA;\\n  padding: 140px 40px 40px;\\n}\\n\\na, button {\\n  cursor: pointer;\\n}\\n\\n.display-none {\\n  display: none;\\n}\\n\\n.list-style-reset {\\n  list-style: none;\\n}\\n\\n.link-style-reset {\\n  text-decoration: none;\\n}\\n\\n#js-transition-disabled * {\\n  transition: none !important;\\n}\\n\\ninput[type=number]::-webkit-outer-spin-button,\\ninput[type=number]::-webkit-inner-spin-button {\\n  -webkit-appearance: none;\\n  margin: 0;\\n}\\n\\n.header {\\n  display: flex;\\n  align-items: center;\\n  justify-content: center;\\n  margin-bottom: 37px;\\n}\\n.header__link {\\n  display: block;\\n}\\n\\n.main {\\n  display: flex;\\n  align-items: center;\\n  flex-direction: column;\\n  flex: 1;\\n}\\n\\n.navigation__list {\\n  display: flex;\\n  font-size: 14px;\\n  line-height: 20px;\\n  padding: 0;\\n  margin: 0;\\n}\\n.navigation__item {\\n  display: flex;\\n  align-items: center;\\n}\\n.navigation__item:after {\\n  content: \\\"\\\";\\n  display: inline-block;\\n  width: 4px;\\n  height: 4px;\\n  border-radius: 50%;\\n  background-color: rgba(61, 127, 255, 0.24);\\n  margin-left: 8px;\\n  margin-right: 8px;\\n}\\n.navigation__item:last-child:after {\\n  display: none;\\n}\\n.navigation__link {\\n  color: #3D7FFF;\\n  border-bottom: 1px solid transparent;\\n  transition: 0.5s;\\n}\\n.navigation__link:hover {\\n  border-bottom: 1px solid #3D7FFF;\\n}\\n\\n.footer {\\n  display: flex;\\n  justify-self: flex-end;\\n  align-items: center;\\n  color: #111111;\\n}\\n.footer__copyright {\\n  margin-right: auto;\\n}\\n.footer__day-mode {\\n  width: 14px;\\n  height: 14px;\\n  background-image: url(\" + ___CSS_LOADER_URL_REPLACEMENT_2___ + \");\\n  background-position: center;\\n  background-repeat: no-repeat;\\n  margin-right: 22px;\\n}\\n.footer__language-change {\\n  color: #111111;\\n  transition: 0.5s;\\n}\\n.footer__language-change:hover {\\n  color: #3D7FFF;\\n}\", \"\"]);\n// Exports\nmodule.exports = exports;\n\n\n//# sourceURL=webpack:///./styles/all.scss?../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js");
+
+/***/ }),
+
+/***/ "../node_modules/css-loader/dist/runtime/api.js":
+/*!******************************************************!*\
+  !*** ../node_modules/css-loader/dist/runtime/api.js ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\n/*\n  MIT License http://www.opensource.org/licenses/mit-license.php\n  Author Tobias Koppers @sokra\n*/\n// css base code, injected by the css-loader\n// eslint-disable-next-line func-names\nmodule.exports = function (useSourceMap) {\n  var list = []; // return the list of modules as css string\n\n  list.toString = function toString() {\n    return this.map(function (item) {\n      var content = cssWithMappingToString(item, useSourceMap);\n\n      if (item[2]) {\n        return \"@media \".concat(item[2], \" {\").concat(content, \"}\");\n      }\n\n      return content;\n    }).join('');\n  }; // import a list of modules into the list\n  // eslint-disable-next-line func-names\n\n\n  list.i = function (modules, mediaQuery, dedupe) {\n    if (typeof modules === 'string') {\n      // eslint-disable-next-line no-param-reassign\n      modules = [[null, modules, '']];\n    }\n\n    var alreadyImportedModules = {};\n\n    if (dedupe) {\n      for (var i = 0; i < this.length; i++) {\n        // eslint-disable-next-line prefer-destructuring\n        var id = this[i][0];\n\n        if (id != null) {\n          alreadyImportedModules[id] = true;\n        }\n      }\n    }\n\n    for (var _i = 0; _i < modules.length; _i++) {\n      var item = [].concat(modules[_i]);\n\n      if (dedupe && alreadyImportedModules[item[0]]) {\n        // eslint-disable-next-line no-continue\n        continue;\n      }\n\n      if (mediaQuery) {\n        if (!item[2]) {\n          item[2] = mediaQuery;\n        } else {\n          item[2] = \"\".concat(mediaQuery, \" and \").concat(item[2]);\n        }\n      }\n\n      list.push(item);\n    }\n  };\n\n  return list;\n};\n\nfunction cssWithMappingToString(item, useSourceMap) {\n  var content = item[1] || ''; // eslint-disable-next-line prefer-destructuring\n\n  var cssMapping = item[3];\n\n  if (!cssMapping) {\n    return content;\n  }\n\n  if (useSourceMap && typeof btoa === 'function') {\n    var sourceMapping = toComment(cssMapping);\n    var sourceURLs = cssMapping.sources.map(function (source) {\n      return \"/*# sourceURL=\".concat(cssMapping.sourceRoot || '').concat(source, \" */\");\n    });\n    return [content].concat(sourceURLs).concat([sourceMapping]).join('\\n');\n  }\n\n  return [content].join('\\n');\n} // Adapted from convert-source-map (MIT)\n\n\nfunction toComment(sourceMap) {\n  // eslint-disable-next-line no-undef\n  var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));\n  var data = \"sourceMappingURL=data:application/json;charset=utf-8;base64,\".concat(base64);\n  return \"/*# \".concat(data, \" */\");\n}\n\n//# sourceURL=webpack:///../node_modules/css-loader/dist/runtime/api.js?");
+
+/***/ }),
+
+/***/ "../node_modules/css-loader/dist/runtime/getUrl.js":
+/*!*********************************************************!*\
+  !*** ../node_modules/css-loader/dist/runtime/getUrl.js ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nmodule.exports = function (url, options) {\n  if (!options) {\n    // eslint-disable-next-line no-param-reassign\n    options = {};\n  } // eslint-disable-next-line no-underscore-dangle, no-param-reassign\n\n\n  url = url && url.__esModule ? url.default : url;\n\n  if (typeof url !== 'string') {\n    return url;\n  } // If url is already wrapped in quotes, remove them\n\n\n  if (/^['\"].*['\"]$/.test(url)) {\n    // eslint-disable-next-line no-param-reassign\n    url = url.slice(1, -1);\n  }\n\n  if (options.hash) {\n    // eslint-disable-next-line no-param-reassign\n    url += options.hash;\n  } // Should url be wrapped?\n  // See https://drafts.csswg.org/css-values-3/#urls\n\n\n  if (/[\"'() \\t\\n]/.test(url) || options.needQuotes) {\n    return \"\\\"\".concat(url.replace(/\"/g, '\\\\\"').replace(/\\n/g, '\\\\n'), \"\\\"\");\n  }\n\n  return url;\n};\n\n//# sourceURL=webpack:///../node_modules/css-loader/dist/runtime/getUrl.js?");
+
+/***/ }),
+
+/***/ "../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js":
+/*!*****************************************************************************!*\
+  !*** ../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js ***!
+  \*****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nvar isOldIE = function isOldIE() {\n  var memo;\n  return function memorize() {\n    if (typeof memo === 'undefined') {\n      // Test for IE <= 9 as proposed by Browserhacks\n      // @see http://browserhacks.com/#hack-e71d8692f65334173fee715c222cb805\n      // Tests for existence of standard globals is to allow style-loader\n      // to operate correctly into non-standard environments\n      // @see https://github.com/webpack-contrib/style-loader/issues/177\n      memo = Boolean(window && document && document.all && !window.atob);\n    }\n\n    return memo;\n  };\n}();\n\nvar getTarget = function getTarget() {\n  var memo = {};\n  return function memorize(target) {\n    if (typeof memo[target] === 'undefined') {\n      var styleTarget = document.querySelector(target); // Special case to return head of iframe instead of iframe itself\n\n      if (window.HTMLIFrameElement && styleTarget instanceof window.HTMLIFrameElement) {\n        try {\n          // This will throw an exception if access to iframe is blocked\n          // due to cross-origin restrictions\n          styleTarget = styleTarget.contentDocument.head;\n        } catch (e) {\n          // istanbul ignore next\n          styleTarget = null;\n        }\n      }\n\n      memo[target] = styleTarget;\n    }\n\n    return memo[target];\n  };\n}();\n\nvar stylesInDom = [];\n\nfunction getIndexByIdentifier(identifier) {\n  var result = -1;\n\n  for (var i = 0; i < stylesInDom.length; i++) {\n    if (stylesInDom[i].identifier === identifier) {\n      result = i;\n      break;\n    }\n  }\n\n  return result;\n}\n\nfunction modulesToDom(list, options) {\n  var idCountMap = {};\n  var identifiers = [];\n\n  for (var i = 0; i < list.length; i++) {\n    var item = list[i];\n    var id = options.base ? item[0] + options.base : item[0];\n    var count = idCountMap[id] || 0;\n    var identifier = \"\".concat(id, \" \").concat(count);\n    idCountMap[id] = count + 1;\n    var index = getIndexByIdentifier(identifier);\n    var obj = {\n      css: item[1],\n      media: item[2],\n      sourceMap: item[3]\n    };\n\n    if (index !== -1) {\n      stylesInDom[index].references++;\n      stylesInDom[index].updater(obj);\n    } else {\n      stylesInDom.push({\n        identifier: identifier,\n        updater: addStyle(obj, options),\n        references: 1\n      });\n    }\n\n    identifiers.push(identifier);\n  }\n\n  return identifiers;\n}\n\nfunction insertStyleElement(options) {\n  var style = document.createElement('style');\n  var attributes = options.attributes || {};\n\n  if (typeof attributes.nonce === 'undefined') {\n    var nonce =  true ? __webpack_require__.nc : undefined;\n\n    if (nonce) {\n      attributes.nonce = nonce;\n    }\n  }\n\n  Object.keys(attributes).forEach(function (key) {\n    style.setAttribute(key, attributes[key]);\n  });\n\n  if (typeof options.insert === 'function') {\n    options.insert(style);\n  } else {\n    var target = getTarget(options.insert || 'head');\n\n    if (!target) {\n      throw new Error(\"Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.\");\n    }\n\n    target.appendChild(style);\n  }\n\n  return style;\n}\n\nfunction removeStyleElement(style) {\n  // istanbul ignore if\n  if (style.parentNode === null) {\n    return false;\n  }\n\n  style.parentNode.removeChild(style);\n}\n/* istanbul ignore next  */\n\n\nvar replaceText = function replaceText() {\n  var textStore = [];\n  return function replace(index, replacement) {\n    textStore[index] = replacement;\n    return textStore.filter(Boolean).join('\\n');\n  };\n}();\n\nfunction applyToSingletonTag(style, index, remove, obj) {\n  var css = remove ? '' : obj.media ? \"@media \".concat(obj.media, \" {\").concat(obj.css, \"}\") : obj.css; // For old IE\n\n  /* istanbul ignore if  */\n\n  if (style.styleSheet) {\n    style.styleSheet.cssText = replaceText(index, css);\n  } else {\n    var cssNode = document.createTextNode(css);\n    var childNodes = style.childNodes;\n\n    if (childNodes[index]) {\n      style.removeChild(childNodes[index]);\n    }\n\n    if (childNodes.length) {\n      style.insertBefore(cssNode, childNodes[index]);\n    } else {\n      style.appendChild(cssNode);\n    }\n  }\n}\n\nfunction applyToTag(style, options, obj) {\n  var css = obj.css;\n  var media = obj.media;\n  var sourceMap = obj.sourceMap;\n\n  if (media) {\n    style.setAttribute('media', media);\n  } else {\n    style.removeAttribute('media');\n  }\n\n  if (sourceMap && btoa) {\n    css += \"\\n/*# sourceMappingURL=data:application/json;base64,\".concat(btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))), \" */\");\n  } // For old IE\n\n  /* istanbul ignore if  */\n\n\n  if (style.styleSheet) {\n    style.styleSheet.cssText = css;\n  } else {\n    while (style.firstChild) {\n      style.removeChild(style.firstChild);\n    }\n\n    style.appendChild(document.createTextNode(css));\n  }\n}\n\nvar singleton = null;\nvar singletonCounter = 0;\n\nfunction addStyle(obj, options) {\n  var style;\n  var update;\n  var remove;\n\n  if (options.singleton) {\n    var styleIndex = singletonCounter++;\n    style = singleton || (singleton = insertStyleElement(options));\n    update = applyToSingletonTag.bind(null, style, styleIndex, false);\n    remove = applyToSingletonTag.bind(null, style, styleIndex, true);\n  } else {\n    style = insertStyleElement(options);\n    update = applyToTag.bind(null, style, options);\n\n    remove = function remove() {\n      removeStyleElement(style);\n    };\n  }\n\n  update(obj);\n  return function updateStyle(newObj) {\n    if (newObj) {\n      if (newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap) {\n        return;\n      }\n\n      update(obj = newObj);\n    } else {\n      remove();\n    }\n  };\n}\n\nmodule.exports = function (list, options) {\n  options = options || {}; // Force single-tag solution on IE6-9, which has a hard limit on the # of <style>\n  // tags it will allow on a page\n\n  if (!options.singleton && typeof options.singleton !== 'boolean') {\n    options.singleton = isOldIE();\n  }\n\n  list = list || [];\n  var lastIdentifiers = modulesToDom(list, options);\n  return function update(newList) {\n    newList = newList || [];\n\n    if (Object.prototype.toString.call(newList) !== '[object Array]') {\n      return;\n    }\n\n    for (var i = 0; i < lastIdentifiers.length; i++) {\n      var identifier = lastIdentifiers[i];\n      var index = getIndexByIdentifier(identifier);\n      stylesInDom[index].references--;\n    }\n\n    var newLastIdentifiers = modulesToDom(newList, options);\n\n    for (var _i = 0; _i < lastIdentifiers.length; _i++) {\n      var _identifier = lastIdentifiers[_i];\n\n      var _index = getIndexByIdentifier(_identifier);\n\n      if (stylesInDom[_index].references === 0) {\n        stylesInDom[_index].updater();\n\n        stylesInDom.splice(_index, 1);\n      }\n    }\n\n    lastIdentifiers = newLastIdentifiers;\n  };\n};\n\n//# sourceURL=webpack:///../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js?");
+
+/***/ }),
+
+/***/ "./fonts/Golostextregular.woff":
+/*!*************************************!*\
+  !*** ./fonts/Golostextregular.woff ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"ec7d0d6496782977dd0053609dce4443.woff\");\n\n//# sourceURL=webpack:///./fonts/Golostextregular.woff?");
+
+/***/ }),
+
+/***/ "./fonts/Golostextregular.woff2":
+/*!**************************************!*\
+  !*** ./fonts/Golostextregular.woff2 ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"79beb6689f814c323459c0d911328812.woff2\");\n\n//# sourceURL=webpack:///./fonts/Golostextregular.woff2?");
+
+/***/ }),
+
+/***/ "./img/moon.svg":
+/*!**********************!*\
+  !*** ./img/moon.svg ***!
+  \**********************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"057d8e21022e48c251787cbc4a245ea7.svg\");\n\n//# sourceURL=webpack:///./img/moon.svg?");
+
+/***/ }),
+
+/***/ "./index.js":
+/*!******************!*\
+  !*** ./index.js ***!
+  \******************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_all_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/all.scss */ \"./styles/all.scss\");\n/* harmony import */ var _styles_all_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_styles_all_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _scripts_inputINN__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scripts/inputINN */ \"./scripts/inputINN.js\");\n/* harmony import */ var _scripts_inputSite__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./scripts/inputSite */ \"./scripts/inputSite.js\");\n/* harmony import */ var _scripts_inputEmail__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./scripts/inputEmail */ \"./scripts/inputEmail.js\");\n/* harmony import */ var _scripts_inputPhone__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./scripts/inputPhone */ \"./scripts/inputPhone.js\");\n/* harmony import */ var _scripts_transitionOn__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./scripts/transitionOn */ \"./scripts/transitionOn.js\");\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nwindow.onload = () => Object(_scripts_transitionOn__WEBPACK_IMPORTED_MODULE_5__[\"transitionOn\"])();\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./index.js?");
+
+/***/ }),
+
+/***/ "./scripts/inputEmail.js":
+/*!*******************************!*\
+  !*** ./scripts/inputEmail.js ***!
+  \*******************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _validateForm__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./validateForm */ \"./scripts/validateForm.js\");\n\r\nconst inputINNElement = document.querySelector('.js-form__inn-field');\r\nconst inputPhoneElement = document.querySelector('.js-form__phone-field');\r\nconst inputEmailElement = document.querySelector('.js-form__email-field');\r\nconst inputSiteElement = document.querySelector('.js-form__site-field');\r\nconst verificationEmailIconElement = document.querySelector('.js-email-ok');\r\n\r\n//Замена значения placeholder при фокусировке и расфокусировке input`a\r\ninputEmailElement.addEventListener('focus', () => {\r\n    inputEmailElement.setAttribute('placeholder', 'example@mail.com');\r\n})\r\ninputEmailElement.addEventListener('blur', () => {\r\n    inputEmailElement.setAttribute('placeholder', 'Электронная почта');\r\n})\r\n\r\n//Отображение  картинки с галочкой при валидном значении адреса почты\r\ninputEmailElement.addEventListener('input', () => {\r\n    if (Object(_validateForm__WEBPACK_IMPORTED_MODULE_0__[\"validateEmail\"])(inputEmailElement.value)) {\r\n        verificationEmailIconElement.classList.remove('display-none');\r\n    } else {\r\n        verificationEmailIconElement.classList.add('display-none');\r\n    }\r\n})\r\n\r\n\n\n//# sourceURL=webpack:///./scripts/inputEmail.js?");
+
+/***/ }),
+
+/***/ "./scripts/inputINN.js":
+/*!*****************************!*\
+  !*** ./scripts/inputINN.js ***!
+  \*****************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _validateForm__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./validateForm */ \"./scripts/validateForm.js\");\n\r\n\r\nconst inputINNElement = document.querySelector('.js-form__inn-field');\r\nconst inputPhoneElement = document.querySelector('.js-form__phone-field');\r\nconst inputEmailElement = document.querySelector('.js-form__email-field');\r\nconst inputSiteElement = document.querySelector('.js-form__site-field');\r\nconst INNVerificationResultBlockElement = document.querySelector('.js-inn-verification-result-block');\r\nconst verificationINNIconElement = document.querySelector('.js-inn-ok');\r\n\r\n\r\n//Замена значения placeholder при фокусировке и расфокусировке input`a\r\ninputINNElement.addEventListener('focus', () => {\r\n    inputINNElement.setAttribute('placeholder', 'Введите 10 или 12 цифр');\r\n})\r\ninputINNElement.addEventListener('blur', () => {\r\n    inputINNElement.setAttribute('placeholder', 'ИНН организации или ИП');\r\n})\r\n\r\n//Отображение количества введенных цифр и отображение картинки с галочкой при 10 и 12 введенный цифрах\r\ninputINNElement.addEventListener('input', () => {\r\n\r\n    INNVerificationResultBlockElement.textContent = inputINNElement.value.length;\r\n    if (inputINNElement.value.length === 0) {\r\n        INNVerificationResultBlockElement.textContent = \"\";\r\n    }\r\n\r\n    if (Object(_validateForm__WEBPACK_IMPORTED_MODULE_0__[\"validateINN\"])(inputINNElement.value.length)) {\r\n        verificationINNIconElement.classList.remove('display-none');\r\n        INNVerificationResultBlockElement.classList.add('display-none');\r\n    } else {\r\n        verificationINNIconElement.classList.add('display-none');\r\n        INNVerificationResultBlockElement.classList.remove('display-none');\r\n    }\r\n});\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./scripts/inputINN.js?");
+
+/***/ }),
+
+/***/ "./scripts/inputPhone.js":
+/*!*******************************!*\
+  !*** ./scripts/inputPhone.js ***!
+  \*******************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _validateForm__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./validateForm */ \"./scripts/validateForm.js\");\n\r\nconst inputINNElement = document.querySelector('.js-form__inn-field');\r\nconst inputPhoneElement = document.querySelector('.js-form__phone-field');\r\nconst inputEmailElement = document.querySelector('.js-form__email-field');\r\nconst inputSiteElement = document.querySelector('.js-form__site-field');\r\nconst verificationPhoneIconElement = document.querySelector('.js-phone-ok');\r\n\r\n//Замена значения placeholder при фокусировке и расфокусировке input`a\r\ninputPhoneElement.addEventListener('focus', () => {\r\n    inputPhoneElement.setAttribute('placeholder', 'X(XXX)XXX-XX-XX');\r\n})\r\ninputPhoneElement.addEventListener('blur', () => {\r\n    inputPhoneElement.setAttribute('placeholder', 'Номер телефона');\r\n})\r\n\r\n//Отображение  картинки с галочкой при валидном значении адреса почты\r\ninputPhoneElement.addEventListener('input', () => {\r\n    if (Object(_validateForm__WEBPACK_IMPORTED_MODULE_0__[\"validatePhone\"])(inputPhoneElement.value)) {\r\n        verificationPhoneIconElement.classList.remove('display-none');\r\n    } else {\r\n        verificationPhoneIconElement.classList.add('display-none');\r\n    }\r\n})\r\n\r\n\n\n//# sourceURL=webpack:///./scripts/inputPhone.js?");
+
+/***/ }),
+
+/***/ "./scripts/inputSite.js":
+/*!******************************!*\
+  !*** ./scripts/inputSite.js ***!
+  \******************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _validateForm__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./validateForm */ \"./scripts/validateForm.js\");\n\r\nconst inputINNElement = document.querySelector('.js-form__inn-field');\r\nconst inputPhoneElement = document.querySelector('.js-form__phone-field');\r\nconst inputEmailElement = document.querySelector('.js-form__email-field');\r\nconst inputSiteElement = document.querySelector('.js-form__site-field');\r\nconst verificationSiteIconElement = document.querySelector('.js-site-ok');\r\n\r\n//Замена значения placeholder при фокусировке и расфокусировке input`a\r\ninputSiteElement.addEventListener('focus', () => {\r\n    inputSiteElement.setAttribute('placeholder', 'www.example.com');\r\n})\r\ninputSiteElement.addEventListener('blur', () => {\r\n    inputSiteElement.setAttribute('placeholder', 'Сайт магазина');\r\n})\r\n\r\n//Отображение  картинки с галочкой при валидном значении адреса почты\r\ninputSiteElement.addEventListener('input', () => {\r\n    if (Object(_validateForm__WEBPACK_IMPORTED_MODULE_0__[\"validateUrl\"])(inputSiteElement.value)) {\r\n        verificationSiteIconElement.classList.remove('display-none');\r\n    } else {\r\n        verificationSiteIconElement.classList.add('display-none');\r\n    }\r\n});\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./scripts/inputSite.js?");
+
+/***/ }),
+
+/***/ "./scripts/transitionOn.js":
+/*!*********************************!*\
+  !*** ./scripts/transitionOn.js ***!
+  \*********************************/
+/*! exports provided: transitionOn */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"transitionOn\", function() { return transitionOn; });\n\r\n\r\nconst transitionOn = () => {\r\n  const mainElem = document.querySelector('.main');\r\n  mainElem.removeAttribute('id');\r\n  console.log('transition on')\r\n}\r\n\n\n//# sourceURL=webpack:///./scripts/transitionOn.js?");
+
+/***/ }),
+
+/***/ "./scripts/validateForm.js":
+/*!*********************************!*\
+  !*** ./scripts/validateForm.js ***!
+  \*********************************/
+/*! exports provided: validateINN, validatePhone, validateEmail, validateUrl, validateForm */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"validateINN\", function() { return validateINN; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"validatePhone\", function() { return validatePhone; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"validateEmail\", function() { return validateEmail; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"validateUrl\", function() { return validateUrl; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"validateForm\", function() { return validateForm; });\n//Ф-ия вылидации длинный ИНН\r\nconst validateINN = (length) => {\r\n    let result = false;\r\n    if (length === 10 || length === 12) {\r\n        result = true;\r\n    }\r\n    return result;\r\n}\r\n\r\n// Ф-ия валидации почты (можно сделать более узкую валидацию расширя регулярное выражение,\r\n// но логика остается такой же)\r\nconst validatePhone = (phoneNumber) => {\r\n    let re = /^((8|\\+7)[\\- ]?)?(\\(?\\d{3}\\)?[\\- ]?)?[\\d\\- ]{7,10}$/;\r\n    return re.test(phoneNumber);\r\n}\r\n\r\n//Ф-ия валидации почты (можно сделать более узкую валидацию расширя регулярное выражение,\r\n// но логика остается такой же)\r\nconst validateEmail = (email) => {\r\n    let re = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;\r\n    return re.test(email);\r\n}\r\n\r\n//Ф-ия валидации адреса сайта (можно сделать более узкую валидацию расширя регулярное выражение,\r\n// но логика остается такой же)\r\nconst validateUrl = (url) => {\r\n    let re = /^(https?:\\/\\/)?([\\da-z.-]+)\\.([a-z.]{2,6})([\\/\\w .-]*)*\\/?$/;\r\n    return re.test(url);\r\n}\r\n\r\nconst btnSubmitElement = document.querySelector('#js-btn-submit');\r\n//Ф-ия активации кнопки отправки формы\r\nconst validateForm = (inn, phone, email, url) => {\r\n    let result = false;\r\n    if (validateINN(inn) && validatePhone(phone) && validateEmail(email) && validateUrl(url)) {\r\n        result = true;\r\n        btnSubmitElement.classList.remove('form__btn-submit-disabled');\r\n        btnSubmitElement.classList.add('form__btn-submit');\r\n        btnSubmitElement.removeAttribute('disabled');\r\n    } else {\r\n        btnSubmitElement.classList.add('form__btn-submit-disabled');\r\n        btnSubmitElement.classList.remove('form__btn-submit');\r\n        btnSubmitElement.setAttribute('disabled', 'true');\r\n    }\r\n    return result;\r\n}\n\n//# sourceURL=webpack:///./scripts/validateForm.js?");
+
+/***/ }),
+
+/***/ "./styles/all.scss":
+/*!*************************!*\
+  !*** ./styles/all.scss ***!
+  \*************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ \"../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js\");\n            var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./all.scss */ \"../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./styles/all.scss\");\n\n            content = content.__esModule ? content.default : content;\n\n            if (typeof content === 'string') {\n              content = [[module.i, content, '']];\n            }\n\nvar options = {};\n\noptions.insert = \"head\";\noptions.singleton = false;\n\nvar update = api(content, options);\n\nvar exported = content.locals ? content.locals : {};\n\n\n\nmodule.exports = exported;\n\n//# sourceURL=webpack:///./styles/all.scss?");
+
+/***/ })
+
+/******/ });
