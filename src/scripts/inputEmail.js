@@ -20,5 +20,6 @@ inputEmailElement.addEventListener('input', () => {
     } else {
         verificationEmailIconElement.classList.add('display-none');
     }
+    validateForm (inputINNElement.value.length, inputPhoneElement.value, inputEmailElement.value, inputSiteElement.value);
 })
 

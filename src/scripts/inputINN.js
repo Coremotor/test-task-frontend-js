@@ -31,6 +31,7 @@ inputINNElement.addEventListener('input', () => {
         verificationINNIconElement.classList.add('display-none');
         INNVerificationResultBlockElement.classList.remove('display-none');
     }
+    validateForm (inputINNElement.value.length, inputPhoneElement.value, inputEmailElement.value, inputSiteElement.value);
 });
 
 
