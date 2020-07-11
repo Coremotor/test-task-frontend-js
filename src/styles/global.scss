@@ -6,6 +6,7 @@
   font-family: Golos, sans-serif;
   background-color: $bg-color;
   padding: 140px 40px 40px;
+  overflow: hidden;
 }
 
 a, button {
@@ -32,6 +33,7 @@ input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+
 }
 input[type='number'] {
   -moz-appearance: textfield;
