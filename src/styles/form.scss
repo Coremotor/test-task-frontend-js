@@ -55,6 +55,7 @@
     border: 2px solid #D9D9D9;
     border-radius: 6px;
     padding: 10px 44px 10px 16px;
+    outline: none;
     transition: .5s;
   }
 
@@ -81,6 +82,8 @@
     position: absolute;
     display: flex;
     right: 15px;
+    color: red;
+    font-weight: bold;
   }
 
   &__icon-done {

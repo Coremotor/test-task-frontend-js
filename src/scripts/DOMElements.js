@@ -1,0 +1,10 @@
+export const inputINNElement = document.querySelector('.js-form__inn-field');
+export const inputPhoneElement = document.querySelector('.js-form__phone-field');
+export const inputEmailElement = document.querySelector('.js-form__email-field');
+export const inputUrlElement = document.querySelector('.js-form__site-field');
+export const INNVerificationResultBlockElement = document.querySelector('.js-inn-verification-result-block');
+export const btnSubmitElement = document.querySelector('#js-btn-submit');
+export const verificationINNIconElement = document.querySelector('.js-inn-ok');
+export const verificationEmailIconElement = document.querySelector('.js-email-ok');
+export const verificationUrlIconElement = document.querySelector('.js-site-ok');
+export const verificationPhoneIconElement = document.querySelector('.js-phone-ok');

@@ -1,29 +1,29 @@
-import { validateINN, validateForm } from './validateForm';
-
-const inputINNElement = document.querySelector('.js-form__inn-field');
-const inputPhoneElement = document.querySelector('.js-form__phone-field');
-const inputEmailElement = document.querySelector('.js-form__email-field');
-const inputSiteElement = document.querySelector('.js-form__site-field');
-const INNVerificationResultBlockElement = document.querySelector('.js-inn-verification-result-block');
-const verificationINNIconElement = document.querySelector('.js-inn-ok');
-
+import {validateINN, validateForm, changePlaceholder} from './lib';
+import {
+    btnSubmitElement,
+    inputEmailElement,
+    verificationINNIconElement,
+    inputINNElement,
+    inputPhoneElement,
+    inputUrlElement,
+    INNVerificationResultBlockElement
+} from "./DOMElements";
 
 //Замена значения placeholder при фокусировке и расфокусировке input`a
-inputINNElement.addEventListener('focus', () => {
-    inputINNElement.setAttribute('placeholder', 'Введите 10 или 12 цифр');
-})
-inputINNElement.addEventListener('blur', () => {
-    inputINNElement.setAttribute('placeholder', 'ИНН организации или ИП');
-})
+changePlaceholder(inputINNElement, 'ИНН организации или ИП', 'Введите 10 или 12 цифр')
 
-//Отображение количества введенных цифр и отображение картинки с галочкой при 10 и 12 введенный цифрах
+//Отображение количества введенных цифр и отображение картинки с галочкой при 10 и 12 введенный цифрах и валидация всей формы целиком
 inputINNElement.addEventListener('input', () => {
 
+    //отображение кол-ва чисел введенных в поле ИНН
     INNVerificationResultBlockElement.textContent = inputINNElement.value.length;
     if (inputINNElement.value.length === 0) {
         INNVerificationResultBlockElement.textContent = "";
     }
 
+// Здесь можно еще дополнительно проверить на ввод только чисел,
+// но так как в разметке тип инпута стоит "number",
+// дополнительно проверок я не стал делать
     if (validateINN(inputINNElement.value.length)) {
         verificationINNIconElement.classList.remove('display-none');
         INNVerificationResultBlockElement.classList.add('display-none');
@@ -31,8 +31,6 @@ inputINNElement.addEventListener('input', () => {
         verificationINNIconElement.classList.add('display-none');
         INNVerificationResultBlockElement.classList.remove('display-none');
     }
-    validateForm (inputINNElement.value.length, inputPhoneElement.value, inputEmailElement.value, inputSiteElement.value);
+    validateForm(btnSubmitElement, inputINNElement.value.length, inputPhoneElement.value, inputEmailElement.value, inputUrlElement.value);
+
 });
-
-
-

@@ -1,3 +1,15 @@
+const btnSubmitElement = document.querySelector('#js-btn-submit');
+
+//Ф-ия замены значения placeholder при фокусировке и расфокусировке input`a
+export const changePlaceholder = (elem, firstPlaceholder, secondPlaceholder) => {
+    elem.addEventListener('focus', () => {
+        elem.setAttribute('placeholder', secondPlaceholder);
+    })
+    elem.addEventListener('blur', () => {
+        elem.setAttribute('placeholder', firstPlaceholder);
+    })
+}
+
 //Ф-ия вылидации длинный ИНН
 export const validateINN = (length) => {
     let result = false;
@@ -10,7 +22,7 @@ export const validateINN = (length) => {
 // Ф-ия валидации почты (можно сделать более узкую валидацию расширя регулярное выражение,
 // но логика остается такой же)
 export const validatePhone = (phoneNumber) => {
-    let re = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
+    let re = /\+7\(\d{3}\)\d{3}-\d{2}-\d{2}/;
     return re.test(phoneNumber);
 }
 
@@ -28,9 +40,8 @@ export const validateUrl = (url) => {
     return re.test(url);
 }
 
-const btnSubmitElement = document.querySelector('#js-btn-submit');
 //Ф-ия активации кнопки отправки формы
-export const validateForm = (inn, phone, email, url) => {
+export const validateForm = (button, inn, phone, email, url) => {
     let result = false;
     if (validateINN(inn) && validatePhone(phone) && validateEmail(email) && validateUrl(url)) {
         result = true;
